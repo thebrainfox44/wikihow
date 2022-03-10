@@ -116,3 +116,16 @@ body .result h2{
     font-size: 110%;
     margin-top: 0px;
 }
+
+.Filmseries{
+    position: absolute;
+    top: 10px;
+    left: 120%;
+    background: rgba(128, 128, 128, 0.856);
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+
