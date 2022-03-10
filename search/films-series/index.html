@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <link rel="stylesheet" href="http://127.0.0.1:5500/ressources/css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <h1 id="article">articles:</h1>
+
+        <div class="result" id="article">
+            <a href="https://127.0.0.1:5500/article/spiderman/noWayHome">spiderman: No Way Home</a>
+            <h2>le dernier spiderman à être sorti</h2>
+        </div>
+
+        <div class="result" id="article">
+            <a href="https://127.0.0.1:5500/article/theWitcher">the witcher</a>
+            <h2>série TV dans un univers de type médieval fantastique</h2>
+        </div>
+
+        <div class="result" id="article">
+            <a href="https://127.0.0.1:5500/article/arcane">arcane</a>
+            <h2>série d'annimation basée sur l'univers de lol (ligue of legends)</h2>
+        </div>
+
+        <div class="result" id="article">
+            <a href="https://127.0.0.1:5500/article/scream">scream</a>
+            <h2>film d'horeur</h2>
+        </div>
+
+        <div class="result" id="article">
+            <a href="https://127.0.0.1:5500/article/lucifer">lucifer</a>
+            <h2>série mettant en scène le diable "en vacances" à los angeles</h2>
+        </div>
+
+        <div class="result" id="article">
+            <a href="https://127.0.0.1:5500/article/destinity">destiniy</a>
+            <h2>des clones venant du futur vivent parmi nous</h2>
+        </div>
+
+        <div class="result" id="article">
+            <a href="https://127.0.0.1:5500/article/">destiniy</a>
+            <h2>série mettant en scène le diable "en vacances" à los angeles</h2>
+        </div>
+
+    </div>
+    <script src="https://use.fontawesome.com/e0853b1132.js"></script>
+    <script>
+        function search() {
+            var input = document.getElementById('input').value
+            input = input.toLowerCase();
+            var x = document.getElementsByClassName("result");
+
+            for (i = 0; i < x.length; i++) {
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display = "none";
+                } else {
+                    x[i].style.display = "list-item";
+                }
+            }
+        }
+    </script>
+</body>
+<header>
+    <a href="./headerV1.html">
+        <h1><span id="gray">wiki</span><span id="orange">how</span></h1>
+    </a>
+    <a href="./" class="accueil">
+        <h2>accueil</h2>
+    </a>
+    <a href="./explore" class="explore">
+        <h2>explore</h2>
+    </a>
+
+    <input type="search" placeholder="type something to search" id="input" onkeyup="search()">
+    <button onclick="search()" class=""><i class="fa fa-search" aria-hidden="true"></i></button>
+</header>
+</html>
